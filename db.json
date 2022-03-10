@@ -1,0 +1,72 @@
+{
+  "posts": [
+    {
+      "fullname": "harish hg",
+      "mobilenumber": 9731982396,
+      "email": "harishhg430@gmail.com",
+      "password": "123456",
+      "role": "student",
+      "id": 1
+    },
+    {
+      "fullname": "raghu",
+      "mobilenumber": 78965412355,
+      "email": "raghu1@gmail.com",
+      "password": "789456",
+      "role": "teacher",
+      "id": 2
+    },
+    {
+      "fullname": "apple",
+      "mobilenumber": 7865423178,
+      "email": "apple@gmail.com",
+      "password": "123456",
+      "role": "student",
+      "id": 3
+    },
+    {
+      "fullname": "chandan",
+      "mobilenumber": 8795847961,
+      "email": "chandan@gmail.com",
+      "password": "123456",
+      "role": "teacher",
+      "id": 4
+    },
+    {
+      "fullname": "subbu",
+      "mobilenumber": 8523697412,
+      "email": "subbu@gmail.com",
+      "password": "789456",
+      "role": "student",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "size1": "aaa",
+      "size2": "ddd",
+      "size3": "www",
+      "size4": "vvv",
+      "size5": "",
+      "size6": "",
+      "size7": "",
+      "size8": "",
+      "size9": "",
+      "size10": "",
+      "size11": "",
+      "size12": "",
+      "size13": "",
+      "size14": "",
+      "size15": "",
+      "size16": "",
+      "size17": "",
+      "size18": "",
+      "size19": "",
+      "size20": "",
+      "id": 3
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,53 @@
+<div class="bg-img">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+  
+            <div class="text-center">
+              <h1>Siddaganga college</h1>
+              <h6>Signup</h6>
+            </div>
+            <form [formGroup]="regisForm" (ngSubmit)="signup()">
+                          <div class="form-group">
+                              <label for="full name">Full Name</label>
+                              <input formControlName="fullname" type="text" name="fullname" class="form-control" placeholder="Enter your Full Name" >
+                            </div>
+                            <div class="form-group">
+                              <label for="Mobile number">Mobile Number</label>
+                              <input formControlName="mobilenumber" name="mobilenumber" type="number" class="form-control" placeholder="Enter your mobile number">
+                            </div>
+                          <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input formControlName="email" type="email" name="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter your Email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                          </div>
+                          <div class="form-group">
+                            <label for="Password">Password</label>
+                            <input formControlName="password" type="password" name="password" class="form-control" placeholder="create your password">
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="radio" name="role" formControlName="role"  value="student">
+                              <label class="form-check-label" for="exampleRadios1">
+                                Student
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="role" formControlName="role" value="teacher">
+                              <label class="form-check-label" for="exampleRadios2">
+                                Teacher
+                              </label>
+                            </div>
+                          <div>
+                            <button type="submit" class="btn btn-primary">signup</button>
+                          </div>
+                           
+                        </form>
+                        <a routerLink="/login">Already registered? Click to login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

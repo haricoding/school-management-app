@@ -1,0 +1,53 @@
+<div class="container" style="margin-top: 50px;">
+  <table class="table" border="2px">
+    <thead style="color: crimson;">
+      <tr>
+        <th>Day</th>
+        <th>10:00 AM - 11:00 AM</th>
+        <th>10:00 AM - 11:00 AM</th>
+        <th> Break</th>
+        <th>10:00 AM - 11:00 AM</th>
+        <th>10:00 AM - 11:00 AM</th>
+      </tr>
+    </thead>
+    <tbody style="color: green;">
+      <tr *ngFor="let data of tables">
+        <th scope="row">Monday</th>
+        <td>{{data.size1}}</td>
+        <td>{{data.size2}}</td>
+        <td></td>
+        <td>{{data.size3}}</td>
+        <td>{{data.size4}}</td>
+
+      </tr>
+      <tr *ngFor="let data of tables">
+        <th scope="row">Tuesday</th>
+        <td>{{data.size5}}</td>
+        <td>{{data.size6}}</td>
+        <td></td>
+        <td>{{data.size7}}</td>
+        <td>{{data.size8}}</td>
+
+      </tr>
+
+      <tr *ngFor="let data of tables">
+        <th scope="row">Wednesday</th>
+        <td>{{data.size9}}</td>
+        <td>{{data.size10}}</td>
+        <td></td>
+        <td>{{data.size11}}</td>
+        <td>{{data.size12}}</td>
+
+      </tr>
+      <tr *ngFor="let data of tables">
+        <th scope="row">Thursday</th>
+        <td>{{data.size13}}</td>
+        <td>{{data.size14}}</td>
+        <td></td>
+        <td>{{data.size15}}</td>
+        <td>{{data.size16}}</td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>

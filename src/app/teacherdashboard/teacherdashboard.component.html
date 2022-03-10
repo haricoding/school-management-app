@@ -1,0 +1,113 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+       
+        <li>
+            <section>
+                <div >
+                  <button (click)="showtable()" class="btn btn-success" >View Students</button>
+                </div>
+              </section>
+        </li><br><br>
+        <li>
+            <div class="d-flex"  style="margin-left: 100px;" >
+                <button type="button" data-toggle="modal" data-target="#exampleModal1" class="btn btn-success">Add Timetable</button>
+                
+            </div>
+        </li>
+          </ul>
+       </div>
+  </nav>
+<table *ngIf="show" class="table table-bordered table-sm" > 
+    <tr>
+        <th>StudentName</th>
+        <th>StudentEmail</th>
+        <th>StudentMobileNumber</th>
+        <th>studentpassword</th>
+        <th></th>
+    </tr>
+    <tr *ngFor="let d of data">
+        <td>{{d.fullname}}</td>
+        <td>{{d.email}}</td>
+        <td>{{d.mobilenumber}}</td>
+        <td>{{d.password}}</td>
+        <td>
+            <!-- <button class="btn btn-info">Edit</button> -->
+            <div class="btn btn-success mx-2">
+                <button type="button"  data-toggle="modal" [routerLink]="['/edit/',d.id]" data-target="#exampleModal" class="btn btn-sucess">Edit</button>
+                
+            <button class="btn btn-danger mx-3">Delete</button>
+        </div>
+        </td>
+    </tr>
+</table>
+
+<!-- timetable -->
+<div id="stdTable" class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel" style="color: brown;">Timetable</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body"> 
+          <form [formGroup]="submittable"  (ngSubmit)="submit()">
+          <table border="2px" style="color: green;" >
+            <tr>
+              <th>Day</th>
+              <th>10:30 AM - 12:00 AM</th>
+              <th>12:10 AM - 1:30 AM</th>
+              
+              <th>02:00 AM - 03:30 AM</th>
+              <th>03:30 AM - 05:30 AM</th>
+            </tr>
+            <tr>
+              <th>Monday</th>
+              <td><input formControlName="size1" name="size1" id="inp" type="text"></td>
+              <td><input formControlName="size2" name="size2"  id="inp" type="text"></td>
+              
+              <td><input  formControlName="size3" name="size3"  id="inp" type="text"></td>
+              <td><input formControlName="size4" name="size4"  id="inp" type="text"></td>
+            </tr>
+            <tr>
+              <th>Tuesday</th>
+              <td><input formControlName="size5" name="size5"  id="inp" type="text"></td>
+              <td><input formControlName="size6" name="size6"  id="inp" type="text"></td>
+              
+              <td><input formControlName="size7" name="size7"  id="inp" type="text"></td>
+              <td><input formControlName="size8" name="size8"  id="inp" type="text"></td>
+            </tr>
+            <tr>
+              <th>Wednesday</th>
+              <td><input formControlName="size9" name="size9" id="inp" type="text"></td>
+              <td><input formControlName="size10" name="size10"  id="inp" type="text"></td>
+              
+              <td><input formControlName="size11" name="size11"  id="inp" type="text"></td>
+              <td><input formControlName="size12" name="size12"  id="inp" type="text"></td>
+            </tr>
+            <tr>
+                <th>Thursday</th>
+                <td><input formControlName="size13" name="size13" id="inp" type="text"></td>
+                <td><input formControlName="size14" name="size14"  id="inp" type="text"></td>
+            
+                <td><input formControlName="size15" name="size15"  id="inp" type="text"></td>
+                <td><input formControlName="size16" name="size16"  id="inp" type="text"></td>
+              </tr>
+              <tr>
+                <th>Friday</th>
+                <td><input formControlName="size17" name="size17" id="inp" type="text"></td>
+                <td><input formControlName="size18" name="size18"  id="inp" type="text"></td>
+            
+                <td><input formControlName="size19" name="size19"  id="inp" type="text"></td>
+                <td><input formControlName="size20" name="size20"  id="inp" type="text"></td>
+              </tr>
+          </table>
+          <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+        </div> 
+      </div>
+    </div>
+  </div>
